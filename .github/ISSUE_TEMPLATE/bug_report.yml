@@ -1,0 +1,105 @@
+name: Bug report
+description: Something in Antimatter doesn't work the way it should.
+title: "[Bug] "
+labels: ["type/bug", "status/triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! A few details help us reproduce it quickly.
+
+        **Security problem?** Please don't report it here: use [private vulnerability reporting](https://github.com/AntimatterChat/community/security/advisories/new) instead.
+
+        Please [search the existing issues](https://github.com/AntimatterChat/community/issues?q=is%3Aissue) first. If yours is already there, add a 👍 or a comment with your details.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of Antimatter is affected? Pick the closest one.
+      options:
+        - Server
+        - Web app (Fusion)
+        - Web app (classic)
+        - Desktop app
+        - Mobile app (Android/iOS)
+        - Push proxy
+        - Docker / deployment
+        - Website (antimatter.chat)
+        - "Plugin: Agents (AI)"
+        - "Plugin: Kanban (formerly Boards)"
+        - "Plugin: Calendar"
+        - "Plugin: Calls"
+        - "Plugin: GIFs (and the GIF service)"
+        - "Plugin: GitHub"
+        - "Plugin: GitLab"
+        - "Plugin: Jira"
+        - "Plugin: Mail"
+        - "Plugin: Memes"
+        - "Plugin: Metrics"
+        - "Plugin: Notes"
+        - "Plugin: Playbooks"
+        - "Plugin: Polls"
+        - "Plugin: Todo"
+        - "Plugin: Voice channels"
+        - "Plugin: Whiteboard"
+        - Something else / not sure
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The Antimatter version (System Console > About, or the image tag), and the app or plugin version if relevant.
+      placeholder: e.g. server 12.0.0, desktop app 6.4.0
+    validations:
+      required: true
+  - type: dropdown
+    id: deployment
+    attributes:
+      label: How is Antimatter deployed?
+      options:
+        - Docker / Docker Compose (antimatter-docker image)
+        - Kubernetes
+        - Release archive (tar.gz) on a server
+        - Built from source
+        - I'm a user, I don't know
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser, operating system or device
+      description: Where you saw the problem, if it matters.
+      placeholder: e.g. Firefox 131 on Ubuntu 24.04, Pixel 8 with Android 15
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do, step by step?
+      placeholder: |
+        1. Open a channel
+        2. Click on ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened instead?
+      description: Screenshots or a short screen recording are very welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Relevant lines from the server log, the browser console or the app logs. Please remove passwords, tokens and other private data first.
+      render: text

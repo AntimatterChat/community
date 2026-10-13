@@ -1,0 +1,41 @@
+name: Plugin or integration request
+description: Connect Antimatter to another tool or service, or bring over a plugin.
+title: "[Integration] "
+labels: ["type/integration", "status/triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Please [search the existing issues](https://github.com/AntimatterChat/community/issues?q=is%3Aissue+label%3Atype%2Fintegration) first: if someone already asked for this integration, a 👍 on that issue counts too.
+  - type: input
+    id: tool
+    attributes:
+      label: Tool or service
+      description: What should Antimatter work with? A link to it helps.
+      placeholder: e.g. Nextcloud, Grafana, Home Assistant
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What should the integration do?
+      description: For example post notifications to a channel, add slash commands, create items from messages, sign in with it...
+    validations:
+      required: true
+  - type: textarea
+    id: use-case
+    attributes:
+      label: How would you use it?
+      description: Your use case, and who in your community or team would use it.
+  - type: input
+    id: mattermost-plugin
+    attributes:
+      label: Existing Mattermost plugin
+      description: Most Mattermost plugins can be brought over to Antimatter. If one exists, please link it.
+      placeholder: https://github.com/...
+  - type: checkboxes
+    id: help
+    attributes:
+      label: Can you help?
+      options:
+        - label: I could help build or test this integration.

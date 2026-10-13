@@ -1,0 +1,70 @@
+name: Feature request
+description: Suggest a new feature or an improvement to an existing one.
+title: "[Feature] "
+labels: ["type/feature", "status/triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping shape Antimatter! Please [search the existing issues](https://github.com/AntimatterChat/community/issues?q=is%3Aissue) first: if someone already asked for it, a 👍 on that issue counts too.
+
+        Want to talk an idea through before writing it up? Start a thread in [Discussions: Ideas](https://github.com/AntimatterChat/community/discussions/categories/ideas).
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe the situation where you miss this feature.
+      placeholder: When I ..., I can't ...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What would you like?
+      description: How you imagine it working. Mockups and examples from other apps are welcome.
+    validations:
+      required: true
+  - type: textarea
+    id: audience
+    attributes:
+      label: Who would it help?
+      description: For example community members, moderators, admins, teams that do X...
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you've considered
+      description: Workarounds you use today, or other ways to solve the problem.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      description: Which part of Antimatter is this about? Pick the closest one.
+      options:
+        - Server
+        - Web app (Fusion)
+        - Web app (classic)
+        - Desktop app
+        - Mobile app (Android/iOS)
+        - Push proxy
+        - Docker / deployment
+        - Website (antimatter.chat)
+        - "Plugin: Agents (AI)"
+        - "Plugin: Kanban (formerly Boards)"
+        - "Plugin: Calendar"
+        - "Plugin: Calls"
+        - "Plugin: GIFs (and the GIF service)"
+        - "Plugin: GitHub"
+        - "Plugin: GitLab"
+        - "Plugin: Jira"
+        - "Plugin: Mail"
+        - "Plugin: Memes"
+        - "Plugin: Metrics"
+        - "Plugin: Notes"
+        - "Plugin: Playbooks"
+        - "Plugin: Polls"
+        - "Plugin: Todo"
+        - "Plugin: Voice channels"
+        - "Plugin: Whiteboard"
+        - Something else / not sure
+    validations:
+      required: true
