@@ -52,7 +52,7 @@ Issues labelled `good first issue` or `help wanted` are a great way to start con
 - [antimatter.chat](https://github.com/AntimatterChat/antimatter.chat): the website
 
 What we're working on next is on the
-[Antimatter roadmap](https://github.com/orgs/AntimatterChat/projects).
+[Antimatter roadmap](https://github.com/orgs/AntimatterChat/projects/1).
 
 ## Be kind
 
